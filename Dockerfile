@@ -1,1 +1,11 @@
-{"repo": "https://github.com/kinderp/testproject.git", "target_dir": "1232456abc", "runtime_source": "\nFROM opensuse:42.3\n\n\nWORKDIR /workdir\nCOPY . /workdir\n\nRUN zypper --non-interactive in telnet && \\ \n    zypper --non-interactive in vim \n\nCMD None", "working_branch": "opensuse"}
+
+FROM opensuse:42.3
+
+
+WORKDIR /workdir
+COPY . /workdir
+
+RUN zypper --non-interactive in telnet && \ 
+    zypper --non-interactive in vim 
+
+CMD None
